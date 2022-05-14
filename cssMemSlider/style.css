@@ -12,7 +12,7 @@ body {
   font-size: clamp(1rem, calc(1 / 80 * 100vw), 1.125rem);
   line-height: 1.4;
   color: #ffffff;
-  background-color: #3A466D;
+  background-color: #2F5250;
 }
 input {
   display: none;
@@ -76,8 +76,8 @@ label {
   width: 1rem;
   height: 1rem;
   border-radius: 0.3rem;
-  border: 2px solid #A78A28;
-  background-color: #A78A28;
+  border: 2px solid #A69054;
+  background-color: #A69054;
   display: block;
 }
 .slider__control span:hover {
@@ -104,13 +104,13 @@ label {
 #slider__btn-2:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-2] span,
 #slider__btn-3:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-3] span,
 #slider__btn-4:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-4] span {
-  background-color: #E8670C;
+  background-color: #3A736B;
 }
 #slider__btn-1:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-1] span:hover,
 #slider__btn-2:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-2] span:hover,
 #slider__btn-3:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-3] span:hover,
 #slider__btn-4:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-4] span:hover {
-  background-color: #98511f;
+  background-color: #62765B;
 }
 
 #slider__btn-1:checked ~ .slider__items > .slider__item {
@@ -141,6 +141,9 @@ label {
 }
 
 @media screen and (max-width: 48rem) {
+  .slider__items {
+    height: 26rem;
+  }
   .slider__text-controls {
     justify-content: center;
     flex-direction: column-reverse;
