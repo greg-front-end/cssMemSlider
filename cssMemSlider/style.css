@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: clamp(1rem, calc(1rem / 80rem * 100vw), 1.125rem);
+  line-height: 1.4;
+}
+input {
+  display: none;
+}
+label {
+  cursor: pointer;
+}
