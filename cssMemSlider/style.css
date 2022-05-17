@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   display: flex;
   align-items: center;
@@ -14,12 +15,15 @@ body {
   color: #ffffff;
   background-color: #2F5250;
 }
+
 input {
   display: none;
 }
+
 label {
   cursor: pointer;
 }
+
 .main {
   display: flex;
   justify-content: center;
@@ -28,50 +32,58 @@ label {
   max-width: 80rem;
   margin-inline: auto;
 }
+
 .slider {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
   border-radius: 0.5rem;
-  width: clamp(20rem , calc(474 / 1280 * 100vw), 29rem);
+  width: clamp(20rem, calc(474 / 1280 * 100vw), 29rem);
 }
+
 .slider__item,
 .slider__controls,
 .slider__text,
 .slider__control span {
   transition: all 0.5s;
 }
+
 .slider__items {
   display: flex;
   height: 35rem;
   overflow: hidden;
   border-radius: 0.5rem;
-  width: clamp(20rem , calc(474 / 1280 * 100vw), 27rem);
+  width: clamp(20rem, calc(474 / 1280 * 100vw), 27rem);
   box-shadow: 0rem 0rem 0.9rem 0.2rem rgba(0, 0, 0, 0.3);
 }
+
 .slider__item {
   object-fit: cover;
   max-width: 100%;
   height: 100%;
 }
+
 .slider__text-controls {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  width: clamp(20rem , calc(474 / 1280 * 100vw), 27rem);
+  width: clamp(20rem, calc(474 / 1280 * 100vw), 27rem);
 }
+
 .slider__controls {
   display: inline-flex;
   justify-content: center;
   gap: 0.6rem;
 }
+
 .slider__control {
   display: flex;
   justify-content: center;
   width: 2rem;
   height: 2rem;
 }
+
 .slider__control span {
   width: 1rem;
   height: 1rem;
@@ -80,63 +92,83 @@ label {
   background-color: #A69054;
   display: block;
 }
+
 .slider__control span:hover {
   border: 2px solid #d8d1c4;
   background-color: #d8d1c4;
 }
+
 .slider__description {
   display: flex;
   gap: 1rem;
   overflow: hidden;
 }
+
 .slider__text {
   max-width: 16rem;
   flex-grow: 1;
   flex-shrink: 0;
 }
+
 .slider__text span {
   color: #E8670C;
 }
+
 .slider__text span:nth-child(2) {
   color: #A78A28
 }
-#slider__btn-1:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-1] span,
-#slider__btn-2:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-2] span,
-#slider__btn-3:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-3] span,
-#slider__btn-4:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-4] span {
+
+#slider__btn-1:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-1] span,
+#slider__btn-2:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-2] span,
+#slider__btn-3:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-3] span,
+#slider__btn-4:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-4] span {
   background-color: #3A736B;
 }
-#slider__btn-1:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-1] span:hover,
-#slider__btn-2:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-2] span:hover,
-#slider__btn-3:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-3] span:hover,
-#slider__btn-4:checked ~ .slider__text-controls > .slider__controls > label[for=slider__btn-4] span:hover {
+
+#slider__btn-1:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-1] span:hover,
+#slider__btn-2:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-2] span:hover,
+#slider__btn-3:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-3] span:hover,
+#slider__btn-4:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-4] span:hover {
   background-color: #62765B;
 }
 
-#slider__btn-1:checked ~ .slider__items > .slider__item {
+#slider__btn-1:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-1] span:active,
+#slider__btn-2:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-2] span:active,
+#slider__btn-3:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-3] span:active,
+#slider__btn-4:checked~.slider__text-controls>.slider__controls>label[for=slider__btn-4] span:active {
+  background-color: #E8670C;
+}
+
+#slider__btn-1:checked~.slider__items>.slider__item {
   transform: translateX(0);
 }
-#slider__btn-2:checked ~ .slider__items > .slider__item {
+
+#slider__btn-2:checked~.slider__items>.slider__item {
   transform: translate(-100%);
 }
-#slider__btn-3:checked ~ .slider__items > .slider__item {
+
+#slider__btn-3:checked~.slider__items>.slider__item {
   transform: translate(-200%);
 }
-#slider__btn-4:checked ~ .slider__items > .slider__item {
+
+#slider__btn-4:checked~.slider__items>.slider__item {
   transform: translate(-300%);
   object-fit: fill;
 }
 
-#slider__btn-1:checked ~ .slider__text-controls > .slider__description > .slider__text {
+#slider__btn-1:checked~.slider__text-controls>.slider__description>.slider__text {
   transform: translateX(0);
 }
-#slider__btn-2:checked ~ .slider__text-controls > .slider__description > .slider__text {
+
+#slider__btn-2:checked~.slider__text-controls>.slider__description>.slider__text {
   transform: translateX(calc(-100% - 1rem));
 }
-#slider__btn-3:checked ~ .slider__text-controls > .slider__description > .slider__text {
+
+#slider__btn-3:checked~.slider__text-controls>.slider__description>.slider__text {
   transform: translateX(calc(-200% - 2rem));
 }
-#slider__btn-4:checked ~ .slider__text-controls > .slider__description > .slider__text {
+
+#slider__btn-4:checked~.slider__text-controls>.slider__description>.slider__text {
   transform: translateX(calc(-300% - 3rem));
 }
 
@@ -144,13 +176,16 @@ label {
   .slider__items {
     height: 26rem;
   }
+
   .slider__text-controls {
     justify-content: center;
     flex-direction: column-reverse;
   }
+
   .slider__control {
     height: 1rem;
   }
+
   .slider__text {
     max-width: 100%;
   }
